@@ -1,0 +1,214 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: black;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+/* LOGO CONTAINER (BIG STATE DEFAULT) */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+}
+
+.logo-container img {
+    height: 150px;
+    transition: all 0.4s ease;
+}
+
+#brandText {
+    color: #FFA500;
+    font-size: 30px;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+}
+
+/* NAV LINKS */
+#navLinks {
+    text-align: center;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
+
+#navLinks a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+#navLinks a:hover {
+    color: #FFA500;
+}
+
+/* ================= SCROLLED STATE ================= */
+.navbar.scrolled {
+    padding: 5px 0;
+}
+
+/* shrink logo area */
+.navbar.scrolled .logo-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 50px;
+}
+
+/* shrink logo */
+.navbar.scrolled .logo-container img {
+    height: 50px;
+}
+
+/* shrink text */
+.navbar.scrolled #brandText {
+    font-size: 18px;
+    margin: 0 0 0 10px;
+}
+
+/* move nav to right */
+.navbar.scrolled #navLinks {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    margin-top: 220px;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #FFA500;
+}
+
+.hero p {
+    margin: 10px 0;
+}
+
+.hero button {
+    width: 160px;
+    padding: 12px;
+    background: #FFA500;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #ff8800;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* ================= SERVICES ================= */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #FFA500;
+    color: black;
+}
+
+/* ================= BRANDS ================= */
+.brands span {
+    margin: 10px;
+    padding: 10px 15px;
+    background: #222;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* ================= ABOUT ================= */
+#about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* ================= CONTACT ================= */
+form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #FFA500;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: black;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar.scrolled .logo-container {
+        padding: 10px 20px;
+    }
+
+    .navbar.scrolled #navLinks {
+        right: 20px;
+    }
+
+    .hero {
+        padding-left: 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
